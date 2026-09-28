@@ -23,6 +23,36 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".LinearLayoutActivity"
+            android:exported="false"
+            android:label="线性布局"
+            android:theme="@style/Theme.MyApplication" />
+
+        <activity
+            android:name=".TableLayoutActivity"
+            android:exported="false"
+            android:label="表格布局"
+            android:theme="@style/Theme.MyApplication" />
+
+        <activity
+            android:name=".ConstraintLayout1Activity"
+            android:exported="false"
+            android:label="约束布局1"
+            android:theme="@style/Theme.MyApplication" />
+
+        <activity
+            android:name=".ConstraintLayout2Activity"
+            android:exported="false"
+            android:label="约束布局2"
+            android:theme="@style/Theme.MyApplication" />
+
+        <activity
+            android:name=".ComposeActivity"
+            android:exported="false"
+            android:label="Compose 任务列表"
+            android:theme="@style/Theme.MyApplication" />
     </application>
 
 </manifest>

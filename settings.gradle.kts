@@ -1,5 +1,9 @@
 pluginManagement {
     repositories {
+        // 阿里云镜像（国内直连，优先）
+        maven("https://maven.aliyun.com/repository/google")
+        maven("https://maven.aliyun.com/repository/central")
+        maven("https://maven.aliyun.com/repository/gradle-plugin")
         google {
             content {
                 includeGroupByRegex("com\\.android.*")
@@ -17,6 +21,9 @@ plugins {
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
+        // 阿里云镜像（国内直连，优先）
+        maven("https://maven.aliyun.com/repository/google")
+        maven("https://maven.aliyun.com/repository/central")
         google()
         mavenCentral()
     }
@@ -24,4 +31,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "My Application"
 include(":app")
- 

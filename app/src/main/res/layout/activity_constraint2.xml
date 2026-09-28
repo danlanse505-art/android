@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 实验二：约束布局 ConstraintLayout（二）—— 太空主题 -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0B1026">
+
+    <!-- 背景：银河 -->
+    <ImageView
+        android:id="@+id/galaxy"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/galaxy"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 标题 -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="SPACE"
+        android:textColor="#FFFFFF"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 空间站 -->
+    <ImageView
+        android:id="@+id/space_station"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/space_station_icon"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/milky_way"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Milky Way"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/space_station"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 出发按钮 -->
+    <Button
+        android:id="@+id/depart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="DEPART"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 火箭 -->
+    <ImageView
+        android:id="@+id/rocket"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="32dp"
+        android:src="@drawable/rocket_icon"
+        app:layout_constraintBottom_toTopOf="@id/depart"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/traveler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Traveler"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/rocket"
+        app:layout_constraintStart_toStartOf="@id/rocket"
+        app:layout_constraintEnd_toEndOf="@id/rocket" />
+
+    <!-- 月球车 -->
+    <ImageView
+        android:id="@+id/rover"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="32dp"
+        android:src="@drawable/rover_icon"
+        app:layout_constraintBottom_toTopOf="@id/depart"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 箭头装饰 -->
+    <ImageView
+        android:id="@+id/single_arrow"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/single_arrow"
+        app:layout_constraintBottom_toBottomOf="@id/rocket"
+        app:layout_constraintStart_toEndOf="@id/rocket"
+        app:layout_constraintEnd_toStartOf="@id/depart" />
+
+    <ImageView
+        android:id="@+id/double_arrows"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/double_arrows"
+        app:layout_constraintTop_toTopOf="@id/space_station"
+        app:layout_constraintStart_toEndOf="@id/space_station"
+        app:layout_constraintEnd_toStartOf="@id/rover" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
